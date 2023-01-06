@@ -28,7 +28,7 @@ const ItemPreview = (props) => {
       props.favorite(item.slug);
     }
   };
-  const imgSrc = item?.image ? item.image :image
+
 
   return (
     <div
@@ -38,7 +38,8 @@ const ItemPreview = (props) => {
     >
       <img
         alt="item"
-        src={imgSrc}
+        src={item?.image ? item.image :image}
+        className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />
       <div className="card-body">
